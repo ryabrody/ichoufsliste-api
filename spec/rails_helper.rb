@@ -66,11 +66,11 @@ RSpec.configure do |config|
 
   config.before(:suite) do
     DatabaseCleaner.clean_with(:truncation)
-    DatabaseCleaner.stragety = :transaction
+    DatabaseCleaner.strategy = :transaction
   end
 
   config.around(:each) do |example|
-    DatbaseCleaner.clearing do
+    DatabaseCleaner.cleaning do
       example.run
     end
   end
