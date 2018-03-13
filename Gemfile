@@ -41,8 +41,9 @@ end
 group :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
-  gem 'faker'
+  gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
   gem 'database_cleaner'
+  gem 'rails-erd'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
